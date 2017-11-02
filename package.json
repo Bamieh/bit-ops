@@ -37,6 +37,8 @@
     "build": "cross-env NODE_ENV=production babel-node tools/run build",
     "prepublish": "yarn run build",
     "coverage:lcov": "yarn run test:cover && nyc report --reporter=lcov",
+    "coverage:html": "yarn run test:cover && nyc report --reporter=html",
+    "coverage": "yarn run coverage:html && open coverage/index.html",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   }
 }
