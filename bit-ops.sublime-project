@@ -10,6 +10,7 @@
       "folder_exclude_patterns":
       [
         "node_modules",
+        "distribution",
         ".tmp",
         ".git"
       ],
