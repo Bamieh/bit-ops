@@ -1,0 +1,12 @@
+node_modules
+distribution
+*.sublime-workspace
+.idea
+database.sqlite
+node_modules
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+coverage
+.nyc_output
