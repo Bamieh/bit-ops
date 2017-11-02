@@ -10,9 +10,20 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+branches:
+  only: 
+    - master
 script:
-  - yarn test
+  - npm run test
 after_success:
-  - yarn coverage:lcov
-  - yarn coveralls
-cache: yarn
+  - npm run coverage:lcov
+  - npm run codecov
+  - npm run coveralls
+cache: npm
+deploy:
+  provider: npm
+  email: ahmadbamieh@gmail.com
+  api_key: $NPM_TOKEN
+  skip_cleanup: true
+  on:
+    branch: master
