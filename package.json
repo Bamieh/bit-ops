@@ -23,7 +23,6 @@
     "chai-spies": "^0.7.1",
     "coveralls": "^2.13.1",
     "cross-env": "^4.0.0",
-    "jsdom": "^9.12.0",
     "mkdirp": "^0.5.1",
     "mocha": "^3.3.0",
     "nyc": "^10.2.0",
@@ -38,9 +37,7 @@
     "build": "cross-env NODE_ENV=production babel-node tools/run build",
     "prepublish": "yarn run build",
     "coverage:html": "yarn run test:cover && nyc report --reporter=html",
-    "coverage:lcov": "yarn run test:cover && nyc report --reporter=lcov",
     "coverage": "yarn run coverage:html && open coverage/index.html",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "codecov": "codecov"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   }
 }

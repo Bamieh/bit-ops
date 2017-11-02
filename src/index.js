@@ -77,7 +77,7 @@ const getActiveFlagsFromBranch = branch => {
   return getActiveFlags(branch.bitmask, branch.set);
 };
 
-const buildFlagsObject(filters) {
+const buildFlagsObject = filters => {
   if(!filters) return {};
 
   const filterKeys = Object.keys(filters);

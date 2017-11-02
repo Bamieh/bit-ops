@@ -4,33 +4,7 @@ import {
   deactivateFilter,
 } from '../src';
 
-import {CANDIDATES, FILTERS} from './fixtures';
-
-describe('build flags from Filters', function() {
-  it('should build Flags map from an object of filters', function() {
-    const flags = buildFlags(FILTERS);
-    const expectedFlags =  {
-      paymentTypes: {
-        prepaid: 1,
-        cardless: 2,
-        postpaid: 4,
-      },
-      benefits: {
-        A: 1,
-        B: 2,
-        C: 4,
-      },
-      stars: {
-        1: 1,
-        2: 2,
-        3: 4,
-        4: 8,
-        5: 16,
-      },
-    }
-    expect(flags).to.deep.equal(expectedFlags);
-  })
-});
+import {CANDIDATES, FILTERS} from './fixture/basic';
 
 describe('activate Filter', function() {
   before(function() {
